@@ -1,10 +1,10 @@
+echo "Upgrading pip"
+
+pip install --upgrade pip
+
 echo "installing requests"
 
 pip install requests
-
-echo "installing json"
-
-pip install json
 
 echo "installing tqdm"
 
