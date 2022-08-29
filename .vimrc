@@ -1,6 +1,10 @@
 set number
 set mouse:a
 syntax on
-color delek
+set t_Co=256
+set t_ut=
+colorscheme codedark
+set listchars=tab:\|\ 
+set list
 
-autocmd VimEnter * NERDTree | wincmd p
+"autocmd VimEnter * NERDTree | wincmd p
