@@ -1,3 +1,7 @@
+echo "installing ZSH"
+
+sudo apt install zsh
+
 echo "Installing Oh My Zsh"
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -32,13 +36,17 @@ cd ~/.vim/pack/airblade/start
 git clone https://github.com/NelsonTLima/vim-gitgutter.git
 vim -u NONE -c "helptags vim-gitgutter/doc" -c q
 
+echo "copying dotfiles"
+cp .zrshrc ~/
+cp .vimrc ~/
+
 echo "Installing tmux"
 
 sudo apt install tmux
 
 echo "installing NodeJs"
 
-sudo apt install node
+sudo apt install nodejs
 
 echo "installing ngrok"
 
