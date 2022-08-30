@@ -42,7 +42,7 @@ sudo cp ~/MyDotFiles/.vimrc ~/
 
 echo "installing zsh autosuggestions"
 
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+git clone https://github.com/NelsonTLima/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
 echo "Installing tmux"
 
