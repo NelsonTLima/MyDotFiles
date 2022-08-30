@@ -7,4 +7,7 @@ colorscheme codedark
 set listchars=tab:\|\ 
 set list
 
+set signcolumn=yes
+
+
 "autocmd VimEnter * NERDTree | wincmd p

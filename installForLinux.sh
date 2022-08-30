@@ -21,6 +21,17 @@ mkdir -p ~/.vim/pack/themes/start
 cd ~/.vim/pack/themes/start
 git clone https://github.com/NelsonTLima/vim-code-dark
 
+echo "installing airline"
+
+git clone https://github.com/NelsonTLimavim-airline ~/.vim/pack/dist/start/vim-airline
+
+echo "instaling GitGutter"
+
+mkdir -p ~/.vim/pack/airblade/start
+cd ~/.vim/pack/airblade/start
+git clone https://github.com/NelsonTLima/vim-gitgutter.git
+vim -u NONE -c "helptags vim-gitgutter/doc" -c q
+
 echo "Installing tmux"
 
 sudo apt install tmux
