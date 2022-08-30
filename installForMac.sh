@@ -36,6 +36,14 @@ cd ~/.vim/pack/airblade/start
 git clone https://github.com/NelsonTLima/vim-gitgutter.git
 vim -u NONE -c "helptags vim-gitgutter/doc" -c q
 
+echo "copying dotfiles"
+sudo cp ~/MyDotFiles/.zshrc ~/
+sudo cp ~/MyDotFiles/.vimrc ~/
+
+echo "installing zsh autosuggestions"
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+
 echo "Installing tmux"
 
 brew install tmux
