@@ -27,7 +27,7 @@ git clone https://github.com/NelsonTLima/vim-code-dark
 
 echo "installing airline"
 
-git clone https://github.com/NelsonTLimavim-airline ~/.vim/pack/dist/start/vim-airline
+git clone https://github.com/NelsonTLima/vim-airline ~/.vim/pack/dist/start/vim-airline
 
 echo "instaling GitGutter"
 
