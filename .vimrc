@@ -2,11 +2,18 @@
 
 set number
 set signcolumn=yes
+set updatetime=100
 set clipboard=unnamed
 set listchars=tab:\|\ 
 set list
 set mouse:a
 syntax on
+
+"Calling Plugins
+
+call plug#begin()
+
+call plug#end()
 
 "Setting theme.
 
