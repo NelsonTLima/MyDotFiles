@@ -1,6 +1,8 @@
+#!/bin/bash
+
 case $OSTYPE in linux*)
 
-	echo "I am a Linux"
+	echo "Installing Nelson's dev environment for Linux"
 
 	echo "installing ZSH"
 
@@ -35,7 +37,7 @@ case $OSTYPE in linux*)
 
 darwin*)
 
-	echo "I am a Mac"
+	echo "Installing Nelson's dev environment for Mac"
 
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
