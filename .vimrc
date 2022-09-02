@@ -30,6 +30,7 @@ autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\
 autocmd FileType javascript map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J' ; node" shellescape(@%, 1)<CR>
 autocmd FileType javascript imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\e[3J' ; node" shellescape(@%, 1)<CR>
 
-"uncomment if you want the following:
+"shortcuts
 
-"autocmd VimEnter * NERDTree | wincmd p
+nnoremap <C-e> :NERDTree <CR>
+nnoremap <C-j> :below term <CR>
