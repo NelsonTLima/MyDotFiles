@@ -36,3 +36,4 @@ nnoremap <C-e> :NERDTree <CR>
 nnoremap <C-j> :below term <CR>
 imap <C-e> <esc>:NERDTree <CR>
 imap <C-j> <esc>:below term <CR>
+map <C-i> gg=G
