@@ -34,5 +34,5 @@ autocmd FileType javascript imap <buffer> <F5> <esc>:w<CR>:exec "!clear && print
 
 nnoremap <C-e> :NERDTree <CR>
 nnoremap <C-j> :below term <CR>
-imap <esc><C-e> :NERDTree <CR>
-imap <esc><C-j> :below term <CR>
+imap <C-e> <esc>:NERDTree <CR>
+imap <C-j> <esc>:below term <CR>
