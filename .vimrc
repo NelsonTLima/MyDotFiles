@@ -19,8 +19,8 @@ call plug#end()
 
 set t_Co=256
 set t_ut=
-colorscheme codedark
 let g:codedark_transparent=1
+colorscheme codedark
 
 "Seting run program shortcut
 
