@@ -88,10 +88,16 @@ echo "installing NERDTree"
 git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
 
-echo "installing identLime"
+echo "installing identLine"
 
 git clone https://github.com/Yggdroot/indentLine.git ~/.vim/pack/vendor/start/indentLine
 vim -u NONE -c "helptags  ~/.vim/pack/vendor/start/indentLine/doc" -c "q"
+
+echo "installing auto-pairs"
+
+git clone https://github.com/jiangmiao/auto-pairs.git ~/.vim/auto-pairs
+cp -rf ~/.vim/auto-pairs/plugin ~/.vim/
+rm -rf ~/.vim/auto-pairs
 
 echo "installing vim-code-dark - a vscode theme for VIM"
 
