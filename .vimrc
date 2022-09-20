@@ -2,6 +2,7 @@
 
 let g:indentLine_defaultGroup = 'SpecialKey'
 let g:indentLine_char = '|'
+let g:AutoPairsFlyMode = 1
 set number
 set signcolumn=yes
 set updatetime=100
