@@ -1,9 +1,12 @@
 "Setting numbers, signcolumn, clipboard, ident maker and turning on mouse and syntax
 
+let g:indentLine_defaultGroup = 'SpecialKey'
+let g:indentLine_char = '|'
 set number
 set signcolumn=yes
 set updatetime=100
 set clipboard=unnamed
+set backspace=indent,eol,start
 set listchars=tab:\|\ 
 set list
 set mouse:a

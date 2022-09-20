@@ -39,7 +39,13 @@ darwin*)
 
 	echo "Installing Nelson's dev environment for Mac"
 
+	echo "installing homebrew"
+
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+	echo "installing full and updated vim"
+
+	brew install vim
 
 	echo "installing git"
 
@@ -82,6 +88,11 @@ echo "installing NERDTree"
 git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
 
+echo "installing identLime"
+
+git clone https://github.com/Yggdroot/indentLine.git ~/.vim/pack/vendor/start/indentLine
+vim -u NONE -c "helptags  ~/.vim/pack/vendor/start/indentLine/doc" -c "q"
+
 echo "installing vim-code-dark - a vscode theme for VIM"
 
 mkdir -p ~/.vim/pack/themes/start
@@ -102,4 +113,4 @@ vim -u NONE -c "helptags vim-gitgutter/doc" -c q
 echo "installing vim-plug"
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
