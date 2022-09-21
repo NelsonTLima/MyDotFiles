@@ -83,6 +83,10 @@ echo "installing auto-suggestions"
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+echo "making vim plugin directory."
+
+mkdir ~/.vim/plugin
+
 echo "installing NERDTree"
 
 git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
@@ -96,8 +100,14 @@ vim -u NONE -c "helptags  ~/.vim/pack/vendor/start/indentLine/doc" -c "q"
 echo "installing auto-pairs"
 
 git clone https://github.com/jiangmiao/auto-pairs.git ~/.vim/auto-pairs
-cp -rf ~/.vim/auto-pairs/plugin ~/.vim/
+cp -rf ~/.vim/auto-pairs/plugin/* ~/.vim/plugin
 rm -rf ~/.vim/auto-pairs
+
+echo "installing vim close-tag"
+
+git clone https://github.com/alvan/vim-closetag.git ~/.vim/vim-closetag
+cp -rf ~/.vim/vim-closetag/plugin/* ~/.vim/plugin
+rm -rf ~/.vim/vim-closetag
 
 echo "installing vim-code-dark - a vscode theme for VIM"
 
