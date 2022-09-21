@@ -2,34 +2,34 @@
 
 case $OSTYPE in linux*)
 
-	echo "Installing Nelson's dev environment for Linux"
+	echo "INSTALLING NELSON'S ENVIROGNMENT FOR LINUX\n\n"
 
-	echo "installing ZSH"
+	echo "INSTALLING ZSH\n\n"
 
 	sudo apt install zsh
 
-	echo "installing Git"
+	echo "\n\nINSTALLING GIT\n\n"
 
 	sudo apt install git
 
-	echo "Installing tmux"
+	echo "\n\nINSTALLING TMUX\n\n"
 
 	sudo apt install tmux
 
-	echo "installing NodeJs"
+	echo "\n\nINSTALLING NODEJS\n\n"
 
 	sudo apt install nodejs
 
-	echo "installing ngrok"
+	echo "\n\nINSTALLING NGROK\n\n"
 
 	sudo apt install ngrok
 
-	echo "installing open-ssh"
+	echo "\n\nINSTALLING OPEN-SSH\n\n"
 
 	sudo apt-get install openssh-server
 	sudo apt-get install openssh-client
 
-	echo "copying dotfiles"
+	echo "\n\nCOPYING DOT FILES\n\n"
 
 	sudo cp ~/MyDotFiles/zshrclinux ~/.zshrc
 	sudo cp ~/MyDotFiles/.vimrc ~/
@@ -37,103 +37,103 @@ case $OSTYPE in linux*)
 
 darwin*)
 
-	echo "Installing Nelson's dev environment for Mac"
+	echo "\n\nINSTALLING NELSON'S ENVIROGNMENT FOR MAC\n\n"
 
-	echo "installing homebrew"
+	echo "\n\nINSTALLING HOMEBREW\n\n"
 
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-	echo "installing full and updated vim"
+	echo "\n\nINSTALLING VIM COMPILED FOR BREW\n\n"
 
 	brew install vim
 
-	echo "installing git"
+	echo "\n\nINSTALLING GIT\n\n"
 
 	brew install git
 
-	echo "Installing tmux"
+	echo "\n\nINSTALLING TMUX\n\n"
 
 	brew install tmux
 
-	echo "installing NodeJs"
+	echo "\n\nINSTALLING NODEJS\n\n"
 
 	brew install nodejs
 
-	echo "installing ngrok"
+	echo "\n\nINSTALLING NGROK\n\n"
 
 	brew install ngrok
 
-	echo "installing openssh"
+	echo "\n\nINSTALLING OPEN-SSH\n\n"
 
 	brew install openssh-server
 	brew install openssh-client
 
-	echo "copying dotfiles"
+	echo "\n\nCOPYING DOT FILES\n\n"
 
 	sudo cp ~/MyDotFiles/.zshrc ~/.zshrc
 	sudo cp ~/MyDotFiles/.vimrc ~/
 	;;
 esac
 
-echo "Installing Oh My Zsh"
+echo "\n\nINSTALLING OH MY ZSH\n\n"
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-echo "installing auto-suggestions"
+echo "\n\nINSTALLING AUTO-SUGGESTIONS\n\n"
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-echo "making vim plugin directory."
+echo "\n\nMAKING VIM PLUGIN DIRECTORY\n\n"
 
 mkdir ~/.vim/plugin
 
-echo "installing NERDTree"
+echo "\n\nVIM - INSTALLING NERDTREE\n\n"
 
 git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
 
-echo "installing identLine"
+echo "\n\nVIM - INSTALLING IDENTLINE\n\n"
 
 git clone https://github.com/Yggdroot/indentLine.git ~/.vim/pack/vendor/start/indentLine
 vim -u NONE -c "helptags  ~/.vim/pack/vendor/start/indentLine/doc" -c "q"
 
-echo "installing auto-pairs"
+echo "\n\nVIM - INSTALLING AUTOPAIRS\n\n"
 
 git clone https://github.com/jiangmiao/auto-pairs.git ~/.vim/auto-pairs
 cp -rf ~/.vim/auto-pairs/plugin/* ~/.vim/plugin
 rm -rf ~/.vim/auto-pairs
 
-echo "installing vim close-tag"
+echo "\n\nVIM - INSTALLING CLOSETAG\n\n"
 
 git clone https://github.com/alvan/vim-closetag.git ~/.vim/vim-closetag
 cp -rf ~/.vim/vim-closetag/plugin/* ~/.vim/plugin
 rm -rf ~/.vim/vim-closetag
 
-echo "installing vim-code-dark - a vscode theme for VIM"
+echo "\n\nINSTALLING VIM-CODE-DARK\n\n"
 
 mkdir -p ~/.vim/pack/themes/start
 cd ~/.vim/pack/themes/start
 git clone https://github.com/tomasiser/vim-code-dark
 
-echo "installing airline"
+echo "\n\nVIM - INSTALLING AIRLINE\n\n"
 
 git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
 
-echo "instaling GitGutter"
+echo "\n\nVIM - INSTALLING GITGUTTER\n\n"
 
 mkdir -p ~/.vim/pack/airblade/start
 cd ~/.vim/pack/airblade/start
 git clone https://github.com/airblade/vim-gitgutter.git
 vim -u NONE -c "helptags vim-gitgutter/doc" -c q
 
-echo "installing vim fugitive."
+echo "\n\ninstalling vim fugitive.\n\n"
 
 mkdir -p ~/.vim/pack/tpope/start
 cd ~/.vim/pack/tpope/start
 git clone https://tpope.io/vim/fugitive.git
 vim -u NONE -c "helptags fugitive/doc" -c q
 
-echo "installing vim-plug"
+echo "\n\nVIM - INSTALLING PLUG\n\n"
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
