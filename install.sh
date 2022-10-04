@@ -75,6 +75,10 @@ darwin*)
 	;;
 esac
 
+echo "INSTALLING RUST"
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 echo "\n\nINSTALLING OH MY ZSH\n\n"
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -91,6 +95,14 @@ echo "\n\nVIM - INSTALLING NERDTREE\n\n"
 
 git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
+
+echo "\n\n VIM - INSTALLING JAVASCRIPT HIGHLIGHT"
+
+git clone https://github.com/pangloss/vim-javascript.git ~/.vim/pack/vim-javascript/start/vim-javascript
+
+echo "\n\nVIM - INSTALLING RUST HIGHLIGHT"
+
+git clone https://github.com/rust-lang/rust.vim ~/.vim/pack/plugins/start/rust.vim
 
 echo "\n\nVIM - INSTALLING IDENTLINE\n\n"
 
