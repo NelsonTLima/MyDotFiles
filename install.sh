@@ -36,8 +36,8 @@ case $OSTYPE in linux*)
 
 	echo "\n\nCOPYING DOT FILES\n\n"
 
-	sudo cp ~/MyDotFiles/zshrclinux ~/.zshrc
-	sudo cp ~/MyDotFiles/.vimrc ~/
+	sudo cp ~/my-dot-files/zshrclinux ~/.zshrc
+	sudo cp ~/my-dot-files/.vimrc ~/
 	;;
 
 darwin*)
@@ -80,8 +80,8 @@ darwin*)
 
 	echo "\n\nCOPYING DOT FILES\n\n"
 
-	sudo cp ~/MyDotFiles/.zshrc ~/.zshrc
-	sudo cp ~/MyDotFiles/.vimrc ~/
+	sudo cp ~/my-dot-files/.zshrc ~/.zshrc
+	sudo cp ~/my-dot-files/.vimrc ~/
 	;;
 esac
 
