@@ -29,6 +29,11 @@ case $OSTYPE in linux*)
 	sudo apt-get install openssh-server
 	sudo apt-get install openssh-client
 
+	echo "\n\nINSTALLING MYSLQ-SERVER\n\n"
+
+	sudo apt-get install mysql-server
+	sudo systemctl enable mysql
+
 	echo "\n\nCOPYING DOT FILES\n\n"
 
 	sudo cp ~/MyDotFiles/zshrclinux ~/.zshrc
@@ -67,6 +72,11 @@ darwin*)
 
 	brew install openssh-server
 	brew install openssh-client
+
+	echo "\n\nINSTALLING MYSLQ\n\n"
+
+	brew install mysql
+	brew services start mysql
 
 	echo "\n\nCOPYING DOT FILES\n\n"
 
