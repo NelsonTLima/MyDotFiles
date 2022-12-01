@@ -37,6 +37,9 @@ autocmd FileType javascript imap <buffer> <F5> <esc>:w<CR>:exec "!clear && print
 autocmd FileType rust map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J' ; cargo run"<CR>
 autocmd FileType rust imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\e[3J' ; cargo run"<CR>
 
+autocmd FileType cpp map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J'; gcc -o bin" shellescape(@%, 1) ";./bin"<CR>
+autocmd FileType cpp imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\e[3J' ; gcc -o bin" shellescape(@%, 1)";./bin"<CR>
+
 "shortcuts
 
 nnoremap <C-e> :NERDTree <CR>
