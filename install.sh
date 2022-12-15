@@ -1,4 +1,5 @@
 #!/bin/bash
+shopt -s xpg_echo
 
 case $OSTYPE in linux*)
 
@@ -87,11 +88,11 @@ darwin*)
 	;;
 esac
 
-echo "SETTING GIT GLOBAL SETTINGS"
+echo "\n\nSETTING GIT GLOBAL SETTINGS\n\n"
 
 sudo git config --global core.excludesfile ~/.gitignore_global
 
-echo "INSTALLING RUST"
+echo "\n\nINSTALLING RUST\n\n"
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
