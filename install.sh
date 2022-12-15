@@ -36,8 +36,9 @@ case $OSTYPE in linux*)
 
 	echo "\n\nCOPYING DOT FILES\n\n"
 
-	sudo cp ~/my-dot-files/zshrclinux ~/.zshrc
-	sudo cp ~/my-dot-files/.vimrc ~/
+	sudo cp zshrclinux ~/.zshrc
+	sudo cp .vimrc ~/
+	sudo cp .gitignore_global ~/
 	;;
 
 darwin*)
@@ -80,10 +81,15 @@ darwin*)
 
 	echo "\n\nCOPYING DOT FILES\n\n"
 
-	sudo cp ~/my-dot-files/.zshrc ~/.zshrc
-	sudo cp ~/my-dot-files/.vimrc ~/
+	sudo cp .zshrc ~/.zshrc
+	sudo cp .vimrc ~/
+	sudo cp .gitignore_global ~/
 	;;
 esac
+
+echo "SETTING GIT GLOBAL SETTINGS"
+
+sudo git config --global core.excludesfile ~/.gitignore_global
 
 echo "INSTALLING RUST"
 
