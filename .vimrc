@@ -31,11 +31,14 @@ colorscheme codedark
 autocmd FileType python map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J'; python3" shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\e[3J' ; python3" shellescape(@%, 1)<CR>
 
+autocmd FileType python map <buffer> <F2> :w<CR>:exec "!clear && printf '\e[3J';pytest test.py"<CR>
+autocmd FileType python imap <buffer> <F2> <esc>:w<CR>:exec "!clear && printf '\e[3J' ;pytest test.py"<CR>
+
 autocmd FileType javascript map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J' ; node" shellescape(@%, 1)<CR>
 autocmd FileType javascript imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\e[3J' ; node" shellescape(@%, 1)<CR>
 
-autocmd FileType html map <buffer> <F5> :w<CR>:below term<CR>python3 -m http.server 80<CR>
-autocmd FileType html imap <buffer> <F5><esc>:w<CR>:below term<CR> python3 -m http.server 80<CR>
+autocmd FileType html map <buffer> <F5> :w<CR>:below term<CR>sudo python3 -m http.server 80<CR>
+autocmd FileType html imap <buffer> <F5><esc>:w<CR>:below term<CR>sudo python3 -m http.server 80<CR>
 
 autocmd FileType rust map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J' ; cargo run"<CR>
 autocmd FileType rust imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\e[3J' ; cargo run"<CR>
