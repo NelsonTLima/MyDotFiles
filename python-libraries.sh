@@ -1,3 +1,6 @@
+#!/bin/bash
+shopt -s xpg_echo
+
 echo "\n\nUPGRADING PIP\n\n"
 
 pip install --upgrade pip
@@ -42,3 +45,8 @@ echo "\n\nINSTALLING SCIKIT-LEARN\n\n"
 
 pip install scikit-learn
 pip3 install scikit-learn
+
+echo "\n\nINSTALLING PYTEST\n\n"
+
+pip install pytest
+pip3 install pytest
