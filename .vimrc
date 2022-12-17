@@ -31,7 +31,6 @@ colorscheme codedark
 autocmd FileType python map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J'; python3" shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\e[3J' ; python3" shellescape(@%, 1)<CR>
 autocmd FileType python map <buffer> K <esc>viwy<esc>:w<CR>:exec "!clear && printf '\e[3J'; pydoc3 %:r.<D-v>"<CR>
-autocmd FileType python imap <buffer> K <esc>viwy<esc>:w<CR>:exec "!clear && printf '\e[3J'; pydoc3 %:r.<D-v>"<CR>
 autocmd FileType python map <buffer> <F6> :w<CR>:exec "!clear && printf '\e[3J';pytest test.py"<CR>
 autocmd FileType python imap <buffer> <F6> <esc>:w<CR>:exec "!clear && printf '\e[3J' ;pytest test.py"<CR>
 
