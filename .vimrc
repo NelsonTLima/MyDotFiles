@@ -11,7 +11,7 @@ set backspace=indent,eol,start
 set listchars=tab:\|\ 
 set list
 set mouse:a
-syntax on
+syntax on 
 
 "Calling Plugins
 
@@ -30,15 +30,16 @@ colorscheme codedark
 
 autocmd FileType python map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J'; python3" shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\e[3J' ; python3" shellescape(@%, 1)<CR>
-
-autocmd FileType python map <buffer> <F2> :w<CR>:exec "!clear && printf '\e[3J';pytest test.py"<CR>
-autocmd FileType python imap <buffer> <F2> <esc>:w<CR>:exec "!clear && printf '\e[3J' ;pytest test.py"<CR>
+autocmd FileType python map <buffer> K viwy<esc>:w<CR>:exec "!clear && printf '\e[3J'; pydoc3 %:r.<D-v>"<CR>
+autocmd FileType python imap <buffer> K viwy<esc>:w<CR>:exec "!clear && printf '\e[3J'; pydoc3 %:r.<D-v>"<CR>
+autocmd FileType python map <buffer> <F6> :w<CR>:exec "!clear && printf '\e[3J';pytest test.py"<CR>
+autocmd FileType python imap <buffer> <F6> <esc>:w<CR>:exec "!clear && printf '\e[3J' ;pytest test.py"<CR>
 
 autocmd FileType javascript map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J' ; node" shellescape(@%, 1)<CR>
 autocmd FileType javascript imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\e[3J' ; node" shellescape(@%, 1)<CR>
 
-autocmd FileType html map <buffer> <F5> :w<CR>:below term<CR>sudo python3 -m http.server 80<CR>
-autocmd FileType html imap <buffer> <F5><esc>:w<CR>:below term<CR>sudo python3 -m http.server 80<CR>
+autocmd FileType html map <buffer> <F5> :w<CR>:below term<CR>python3 -m http.server 80<CR>
+autocmd FileType html imap <buffer> <F5><esc>:w<CR>:below term<CR> python3 -m http.server 80<CR>
 
 autocmd FileType rust map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J' ; cargo run"<CR>
 autocmd FileType rust imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\e[3J' ; cargo run"<CR>
@@ -52,4 +53,3 @@ nnoremap <C-e> :NERDTree <CR>
 nnoremap <C-j> :below term <CR>
 imap <C-e> <esc>:NERDTree <CR>
 imap <C-j> <esc>:below term <CR>
-map <C-i> gg=G
