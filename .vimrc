@@ -37,6 +37,9 @@ autocmd FileType python imap <buffer> <F6> <esc>:w<CR>:exec "!clear && printf '\
 autocmd FileType javascript map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J' ; node" shellescape(@%, 1)<CR>
 autocmd FileType javascript imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\e[3J' ; node" shellescape(@%, 1)<CR>
 
+autocmd FileType sh map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J' ; ./%"<CR>
+autocmd FileType sh imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\e[3J' ; ./%"<CR>
+
 autocmd FileType html map <buffer> <F5> :w<CR>:below term<CR>python3 -m http.server 80<CR>
 autocmd FileType html imap <buffer> <F5><esc>:w<CR>:below term<CR> python3 -m http.server 80<CR>
 
