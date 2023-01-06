@@ -3,39 +3,39 @@ shopt -s xpg_echo
 
 case $OSTYPE in linux*)
 
-	echo -e "\033[33mINSTALLING NELSON'S ENVIROGNMENT FOR LINUX\n\n"
+	echo -e "\033[33mINSTALLING NELSON'S ENVIROGNMENT FOR LINUX\n\n\033[0m"
 
-	echo "\033[32mINSTALLING ZSH\n\n"
+	echo "\033[32mINSTALLING ZSH\n\n\033[0m"
 
 	sudo apt install zsh
 
-	echo "\033[32m\n\nINSTALLING GIT\n\n"
+	echo "\033[32m\n\nINSTALLING GIT\n\n\033[0m"
 
 	sudo apt install git
 
-	echo "\033[32m\n\nINSTALLING TMUX\n\n"
+	echo "\033[32m\n\nINSTALLING TMUX\n\n\033[0m"
 
 	sudo apt install tmux
 
-	echo "\033[32m\n\nINSTALLING NODEJS\n\n"
+	echo "\033[32m\n\nINSTALLING NODEJS\n\n\033[0m"
 
 	sudo apt install nodejs
 
-	echo "\033[32m\n\nINSTALLING NGROK\n\n"
+	echo "\033[32m\n\nINSTALLING NGROK\n\n\033[0m"
 
 	sudo apt install ngrok
 
-	echo "\033[32m\n\nINSTALLING OPEN-SSH\n\n"
+	echo "\033[32m\n\nINSTALLING OPEN-SSH\n\n\033[0m"
 
 	sudo apt-get install openssh-server
 	sudo apt-get install openssh-client
 
-	echo "\033[32m\n\nINSTALLING MYSLQ-SERVER\n\n"
+	echo "\033[32m\n\nINSTALLING MYSLQ-SERVER\n\n\033[0m"
 
 	sudo apt-get install mysql-server
 	sudo systemctl enable mysql
 
-	echo "\033[32m\n\nCOPYING DOT FILES\n"
+	echo "\033[32m\n\nCOPYING DOT FILES\n\033[0m"
 
 	sudo cp zshrclinux ~/.zshrc
 	sudo cp .vimrc ~/
