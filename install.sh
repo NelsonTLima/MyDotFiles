@@ -126,12 +126,6 @@ echo "\n\nVIM - INSTALLING IDENTLINE\n\n"
 git clone https://github.com/Yggdroot/indentLine.git ~/.vim/pack/vendor/start/indentLine
 vim -u NONE -c "helptags  ~/.vim/pack/vendor/start/indentLine/doc" -c "q"
 
-echo "\n\nVIM - INSTALLING AUTOPAIRS\n\n"
-
-git clone https://github.com/jiangmiao/auto-pairs.git ~/.vim/auto-pairs
-cp -rf ~/.vim/auto-pairs/plugin/* ~/.vim/plugin
-rm -rf ~/.vim/auto-pairs
-
 echo "\n\nVIM - INSTALLING CLOSETAG\n\n"
 
 git clone https://github.com/alvan/vim-closetag.git ~/.vim/vim-closetag
