@@ -35,7 +35,7 @@ case $OSTYPE in linux*)
 	sudo apt-get install mysql-server
 	sudo systemctl enable mysql
 
-	echo "\033[32m\n\nCOPYING DOT FILES\n\033[0m"
+	echo "\033[32m\n\n...COPYING DOT FILES...\n\033[0m"
 
 	sudo cp zshrclinux ~/.zshrc
 	sudo cp .vimrc ~/
