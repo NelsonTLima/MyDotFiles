@@ -3,7 +3,7 @@ shopt -s xpg_echo
 
 case $OSTYPE in linux*)
 
-	echo -e "\033[33mINSTALLING NELSON'S ENVIROGNMENT FOR LINUX\n\n\033[0m"
+	echo -e "\033[33m\n\nINSTALLING NELSON'S ENVIROGNMENT FOR LINUX\n\n\033[0m"
 
 	echo "\033[32mINSTALLING ZSH\n\n\033[0m"
 
