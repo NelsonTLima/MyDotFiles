@@ -87,6 +87,10 @@ echo "\033[32m\n...CREATING GIT GLOBAL SETTINGS...\033[0m"
 
 sudo git config --global core.excludesfile ~/.gitignore_global
 
+echo "\033[32m\n\nINSTALLING NPM LIVE-SERVER...\n\n\033[0m"
+
+npm install -g live-server
+
 echo "\033[32m\n\nINSTALLING RUST\n\n\033[0m"
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
