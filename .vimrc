@@ -42,8 +42,8 @@ autocmd FileType javascript imap <buffer> <F5> <esc>:w<CR>:exec "!clear && print
 autocmd FileType sh map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J' ; ./%"<CR>
 autocmd FileType sh imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\e[3J' ; ./%"<CR>
 
-autocmd FileType html map <buffer> <F5> :w<CR>:below term<CR>python3 -m http.server 80<CR>
-autocmd FileType html imap <buffer> <F5><esc>:w<CR>:below term<CR> python3 -m http.server 80<CR>
+autocmd FileType html map <buffer> <F5> :w<CR>:below term<CR>live-server<CR>
+autocmd FileType html imap <buffer> <F5><esc>:w<CR>:below term<CR>live-server<CR>
 
 autocmd FileType rust map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J' ; cargo run"<CR>
 autocmd FileType rust imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\e[3J' ; cargo run"<CR>
