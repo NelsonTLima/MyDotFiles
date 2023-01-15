@@ -25,6 +25,10 @@ echo "\n\nINSTALLING TQDM\n\n"
 pip install tqdm
 pip3 install tqdm
 
+echo "\n\nINSTALLING BEAUTIFUL SOUP\n\n"
+
+pip install bs4
+pip3 install bs4
 
 echo "\n\nINSTALLING MATPLOTLIB\n\n"
 
