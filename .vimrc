@@ -1,5 +1,25 @@
 "Settings
 
+call plug#begin()
+
+Plug 'ryanoasis/vim-devicons'
+
+call plug#end()
+
+"Setting DevIcons.
+set encoding=utf-8
+let g:airline_powerline_fonts = 1
+
+"Setting NERDTree.
+nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
+inoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
+" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
 "Setting indentLine plugin
 let g:indentLine_defaultGroup = 'SpecialKey'
 let g:indentLine_char = '|'
@@ -33,6 +53,7 @@ let g:codedark_transparent=1
 colorscheme codedark
 
 "Tab settings.
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set autoindent
@@ -42,7 +63,7 @@ set expandtab
 set ai
 
 "Other settings.
-set updatetime=1000
+set updatetime=200
 set backspace=indent,eol,start
 set mouse:a
 syntax on
@@ -51,8 +72,13 @@ syntax on
 
 nnoremap <C-e> :NERDTree <CR>
 nnoremap <C-j> :below term <CR>
-imap <C-e> <esc>:NERDTree <CR>
 imap <C-j> <esc>:below term <CR>
+nnoremap <C-j> :below term <CR>
+imap <C-j> <esc>:below term <CR>
+nnoremap <F9> <esc>:tabn<CR>
+imap <F9> <esc>:tabn<CR>
+nnoremap <F8> <esc>:tabp<CR>
+imap <F8> <esc>:tabp<CR>
 
 "FileType particularities.
 

@@ -3,84 +3,90 @@ shopt -s xpg_echo
 
 case $OSTYPE in linux*)
 
-	echo -e "\033[33m\n\nINSTALLING NELSON'S ENVIROGNMENT FOR LINUX\n\n\033[0m"
+    echo -e "\033[33m\n\nINSTALLING NELSON'S ENVIROGNMENT FOR LINUX\n\n\033[0m"
 
-	echo "\033[32mINSTALLING ZSH\n\n\033[0m"
+    echo "\033[32mINSTALLING ZSH\n\n\033[0m"
 
-	sudo apt install zsh
+    sudo apt install zsh
 
-	echo "\033[32m\n\nINSTALLING GIT\n\n\033[0m"
+    echo "\033[32m\n\nINSTALLING GIT\n\n\033[0m"
 
-	sudo apt install git
+    sudo apt install git
 
-	echo "\033[32m\n\nINSTALLING TMUX\n\n\033[0m"
+    echo "\033[32m\n\nINSTALLING TMUX\n\n\033[0m"
 
-	sudo apt install tmux
+    sudo apt install tmux
 
-	echo "\033[32m\n\nINSTALLING NODEJS\n\n\033[0m"
+    echo "\033[32m\n\nINSTALLING NODEJS\n\n\033[0m"
 
-	sudo apt install nodejs
+    sudo apt install nodejs
 
-	echo "\033[32m\n\nINSTALLING NGROK\n\n\033[0m"
+    echo "\033[32m\n\nINSTALLING NGROK\n\n\033[0m"
 
-	sudo apt install ngrok
+    sudo apt install ngrok
 
-	echo "\033[32m\n\nINSTALLING OPEN-SSH\n\n\033[0m"
+    echo "\033[32m\n\nINSTALLING OPEN-SSH\n\n\033[0m"
 
-	sudo apt-get install openssh-server
-	sudo apt-get install openssh-client
+    sudo apt-get install openssh-server
+    sudo apt-get install openssh-client
 
-	echo "\033[32m\n\nINSTALLING MYSLQ-SERVER\n\n\033[0m"
+    echo "\033[32m\n\nINSTALLING MYSLQ-SERVER\n\n\033[0m"
 
-	sudo apt-get install mysql-server
-	sudo systemctl enable mysql
+    sudo apt-get install mysql-server
+    sudo systemctl enable mysql
 
-	echo "\033[32m\n\n...COPYING DOT FILES...\n\033[0m"
+    echo "\033[32m\n\n...COPYING DOT FILES...\n\033[0m"
 
-	sudo cp zshrclinux ~/.zshrc
-	sudo cp .vimrc ~/
-	sudo cp .gitignore_global ~/
-	;;
+    sudo cp zshrclinux ~/.zshrc
+    sudo cp .vimrc ~/
+    sudo cp .gitignore_global ~/
+
+    echo "\033[32m\n\n...COPYING FONT FILES...\n\033[0m"
+    sudo mv NerdFonts /usr/share/fonts
+    ;;
 
 darwin*)
 
-	echo -e "\033[33m\n\nINSTALLING NELSON'S ENVIROGNMENT FOR MAC\n\n\033[0m"
+    echo -e "\033[33m\n\nINSTALLING NELSON'S ENVIROGNMENT FOR MAC\n\n\033[0m"
 
-	echo "\033[32mINSTALLING HOMEBREW\n\n\033[0m"
+    echo "\033[32mINSTALLING HOMEBREW\n\n\033[0m"
 
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-	echo "\033[32m\n\nINSTALLING VIM COMPILED FOR BREW\n\n\033[0m"
+    echo "\033[32m\n\nINSTALLING VIM COMPILED FOR BREW\n\n\033[0m"
 
-	brew install vim
+    brew install vim
 
-	echo "\033[32m\n\nINSTALLING GIT\n\n\033[0m"
+    echo "\033[32m\n\nINSTALLING GIT\n\n\033[0m"
 
-	brew install git
+    brew install git
 
-	echo "\033[32m\n\nINSTALLING TMUX\n\n\033[0m"
+    echo "\033[32m\n\nINSTALLING TMUX\n\n\033[0m"
 
-	brew install tmux
+    brew install tmux
 
-	echo "\033[32m\n\nINSTALLING NODEJS\n\n\033[0m"
+    echo "\033[32m\n\nINSTALLING NODEJS\n\n\033[0m"
 
-	brew install nodejs
+    brew install nodejs
 
-	echo "\033[32m\n\nINSTALLING NGROK\n\n\033[0m"
+    echo "\033[32m\n\nINSTALLING NGROK\n\n\033[0m"
 
-	brew install ngrok
+    brew install ngrok
 
-	echo "\033[32m\n\nINSTALLING MYSLQ\n\n\033[0m"
+    echo "\033[32m\n\nINSTALLING MYSLQ\n\n\033[0m"
 
-	brew install mysql
-	brew services start mysql
+    brew install mysql
+    brew services start mysql
 
-	echo "\033[32m\n\n...COPYING DOT FILES...\n\033[0m"
+    echo "\033[32m\n\n...COPYING DOT FILES...\n\033[0m"
 
-	sudo cp .zshrc ~/.zshrc
-	sudo cp .vimrc ~/
-	sudo cp .gitignore_global ~/
-	;;
+    sudo cp .zshrc ~/.zshrc
+    sudo cp .vimrc ~/
+    sudo cp .gitignore_global ~/
+
+    echo "\033[32m\n\n...COPYING FONT FILES...\n\033[0m"
+    sudo cp -r NerdFonts ~/Library/Fonts/
+    ;;
 esac
 
 echo "\033[32m\n...CREATING GIT GLOBAL SETTINGS...\033[0m"
@@ -164,4 +170,4 @@ vim -u NONE -c "helptags fugitive/doc" -c q
 echo "\033[32m\n\nVIM - INSTALLING PLUG\n\n\033[0m"
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
