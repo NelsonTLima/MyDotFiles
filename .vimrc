@@ -20,6 +20,7 @@ set signcolumn=yes
 "Setting a trail char and indentlines for programming languages that the plugin doesnt work.
 set list lcs=tab:\|\ ,trail:~
 
+
 "Setting clipboard to allow pasting somenthing that was copied outside VIM.
 set clipboard=unnamed
 
@@ -30,6 +31,15 @@ set t_ut=
 "Setting theme.
 let g:codedark_transparent=1
 colorscheme codedark
+
+"Tab settings.
+set softtabstop=4
+set shiftwidth=4
+set autoindent
+set smartindent
+set shiftround
+set expandtab
+set ai
 
 "Other settings.
 set updatetime=1000
@@ -46,11 +56,7 @@ imap <C-j> <esc>:below term <CR>
 
 "FileType particularities.
 
-
 "________________PYTHON________________________________
-
-"Tabulation.
-autocmd FileType python set shiftwidth=4 softtabstop=4
 
 "Run shortcuts.
 autocmd FileType python map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J'; python3 %"<CR>
@@ -91,7 +97,7 @@ autocmd FileType html imap <buffer> <F5><esc>:w<CR>:below term<CR>live-server<CR
 autocmd FileType rust map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J' ; cargo run"<CR>
 autocmd FileType rust imap <buffer> <F5> <esc>:w<CR>:exec "!clear && printf '\e[3J' ; cargo run"<CR>
 
-"________________C____________________________________
+"________________C_and_C++_____________________________
 
 "Compile and run shortcut.
 autocmd FileType cpp map <buffer> <F5> :w<CR>:exec "!clear && printf '\e[3J'; g++ -o bin %;./bin"<CR>
