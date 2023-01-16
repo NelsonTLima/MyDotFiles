@@ -19,7 +19,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'tiagofumo/vim-nerdtree-syntax-highlight'
-"NeoBundle 'PhilRunninger/nerdtree-visual-selection'
+NeoBundle 'PhilRunninger/nerdtree-visual-selection'
 NeoBundle 'ryanoasis/vim-devicons'
 
 call neobundle#end()
