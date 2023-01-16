@@ -174,3 +174,8 @@ echo "\033[32m\n\nVIM - INSTALLING PLUG\n\n\033[0m"
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+echo "\033[32m\n\nVIM - INSTALLING NEOBUNDLE\n\n\033[0m"
+
+mkdir ~/.vim/bundle
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
