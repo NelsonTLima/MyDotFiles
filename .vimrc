@@ -11,8 +11,8 @@ set encoding=utf-8
 let g:airline_powerline_fonts = 1
 
 "Setting NERDTree.
-nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
-inoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
+nnoremap <C-e> <esc>:NERDTreeMirror<CR>:NERDTreeFocus<CR>
+imap <C-e> <esc>:NERDTreeMirror<CR>:NERDTreeFocus<CR>
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 " Exit Vim if NERDTree is the only window remaining in the only tab.
@@ -70,7 +70,6 @@ syntax on
 
 "Global shortcuts.
 
-nnoremap <C-e> :NERDTree <CR>
 nnoremap <C-j> :below term <CR>
 imap <C-j> <esc>:below term <CR>
 nnoremap <C-j> :below term <CR>
