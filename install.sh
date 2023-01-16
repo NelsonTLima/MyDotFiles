@@ -121,6 +121,9 @@ vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
 echo "\033[32m\n\nVIM - INSTALLING JAVASCRIPT HIGHLIGHT\n\n\033[0m"
 
 git clone https://github.com/pangloss/vim-javascript.git ~/.vim/pack/vim-javascript/start/vim-javascript
+mkdir -p ~/.vim/pack/vim-jsx-pretty/start
+cd $_
+git clone git@github.com:MaxMEllon/vim-jsx-pretty.git
 
 echo "\033[32m\n\nVIM - INSTALLING RUST HIGHLIGHT\n\n\033[0m"
 
