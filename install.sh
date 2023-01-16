@@ -170,11 +170,6 @@ cd ~/.vim/pack/tpope/start
 git clone https://tpope.io/vim/fugitive.git
 vim -u NONE -c "helptags fugitive/doc" -c q
 
-echo "\033[32m\n\nVIM - INSTALLING PLUG\n\n\033[0m"
-
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 echo "\033[32m\n\nVIM - INSTALLING NEOBUNDLE\n\n\033[0m"
 
 mkdir ~/.vim/bundle

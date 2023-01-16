@@ -1,4 +1,4 @@
-"PLUGIN INSTALLERS
+"PLUGIN INSTALLER
 
 "NEOBUNDLE (:NeoBundleInstall).
 
@@ -19,6 +19,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'tiagofumo/vim-nerdtree-syntax-highlight'
+"NeoBundle 'PhilRunninger/nerdtree-visual-selection'
+NeoBundle 'ryanoasis/vim-devicons'
 
 call neobundle#end()
 
@@ -28,14 +30,6 @@ filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
-
-"PLUG (:PlugInstall).
-
-call plug#begin()
-
-Plug 'ryanoasis/vim-devicons'
-
-call plug#end()
 
 "________________________________________________________________
 
