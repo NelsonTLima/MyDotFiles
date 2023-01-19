@@ -35,12 +35,6 @@ case $OSTYPE in linux*)
     sudo apt-get install mysql-server
     sudo systemctl enable mysql
 
-    echo "\033[32m\n\n...COPYING DOT FILES...\n\033[0m"
-
-    sudo cp zshrclinux ~/.zshrc
-    sudo cp .vimrc ~/
-    sudo cp .gitignore_global ~/
-
     echo "\033[32m\n\n...COPYING FONT FILES...\n\033[0m"
     sudo mv NerdFonts /usr/share/fonts
     ;;
@@ -78,16 +72,16 @@ darwin*)
     brew install mysql
     brew services start mysql
 
-    echo "\033[32m\n\n...COPYING DOT FILES...\n\033[0m"
-
-    sudo cp .zshrc ~/.zshrc
-    sudo cp .vimrc ~/
-    sudo cp .gitignore_global ~/
-
     echo "\033[32m\n\n...COPYING FONT FILES...\n\033[0m"
     sudo cp -r NerdFonts ~/Library/Fonts/
     ;;
 esac
+
+echo "\033[32m\n\n...COPYING DOT FILES...\n\033[0m"
+
+sudo cp zshrc ~/.zshrc
+sudo cp vimrc ~/.vimrc
+sudo cp gitignore_global ~/.gitignore_global
 
 echo "\033[32m\n...CREATING GIT GLOBAL SETTINGS...\033[0m"
 

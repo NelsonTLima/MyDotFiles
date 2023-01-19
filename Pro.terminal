@@ -5,7 +5,7 @@
 	<key>BackgroundAlphaInactive</key>
 	<real>0.80000000000000004</real>
 	<key>BackgroundBlur</key>
-	<real>0.049993434873949583</real>
+	<real>0.050000000000000003</real>
 	<key>BackgroundBlurInactive</key>
 	<real>0.10000000000000001</real>
 	<key>BackgroundColor</key>
@@ -13,9 +13,9 @@
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
 	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGmCwwXHR4lVSRudWxs1Q0ODxAR
 	EhMUFRZcTlNDb21wb25lbnRzVU5TUkdCXE5TQ29sb3JTcGFjZV8QEk5TQ3VzdG9tQ29s
-	b3JTcGFjZVYkY2xhc3NPEC0wLjA1NDA2MTYxMjIyIDAuMDU0MDYxNjEyMjIgMC4wNTQw
-	NjE2MTIyMiAwLjZPEC4wLjA0ODUxNjgzMjI5IDAuMDQ4NTE2ODMyMjkgMC4wNDg1MTY4
-	MzIyOSAwLjYAEAGAAoAF0xgRGRobHFVOU0lDQ1lOU1NwYWNlSUSAA4AEEAxPEQIYAAAC
+	b3JTcGFjZVYkY2xhc3NPEC0wLjAzNjcxNDMzNjE2IDAuMDM2NzE0MzM2MTYgMC4wMzY3
+	MTQzMzYxNiAwLjdPEC4wLjAzODQ4NzM3NDc4IDAuMDM4NDg3Mzg1OTYgMC4wMzg0ODcz
+	ODU5NiAwLjcAEAGAAoAF0xgRGRobHFVOU0lDQ1lOU1NwYWNlSUSAA4AEEAxPEQIYAAAC
 	GGFwcGwEAAAAbW50clJHQiBYWVogB+YAAQABAAAAAAAAYWNzcEFQUEwAAAAAQVBQTAAA
 	AAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1hcHBs7P2jjjiFR8NttL1PetoYLwAAAAAA
 	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKZGVzYwAAAPwAAAAwY3BydAAAASwAAABQ
@@ -227,7 +227,7 @@
 	<key>VisualBellOnlyWhenMuted</key>
 	<true/>
 	<key>WindowTitle</key>
-	<string>Terminal</string>
+	<string>nelsonlima@Air-de-Nelson</string>
 	<key>columnCount</key>
 	<integer>143</integer>
 	<key>deleteSendsBackspace</key>
@@ -235,7 +235,7 @@
 	<key>name</key>
 	<string>Pro</string>
 	<key>rowCount</key>
-	<integer>35</integer>
+	<integer>36</integer>
 	<key>shellExitAction</key>
 	<integer>2</integer>
 	<key>type</key>
