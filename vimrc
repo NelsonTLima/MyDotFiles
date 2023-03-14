@@ -83,7 +83,7 @@ map <F12> <esc>:q<CR>
 imap <F1> <esc>:below term<CR>
 imap <F2> <esc><C-w>h
 imap <F3> <esc>:w<CR>
-imap <F5> <esc>:call RunCode()<CR>
+imap <F5> <esc>:call CompileAndRunCode()<CR>
 autocmd filetype vim imap <buffer> <F5> <esc>:source %<CR>
 imap <F6> <esc>:call TestCode()<CR>
 imap <F7> <esc>:tabp<CR>
