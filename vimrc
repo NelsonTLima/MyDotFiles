@@ -30,11 +30,11 @@ function! SetServerShortcuts()
     if &filetype == "html"
         set updatetime=2000
         map <F4> :w<CR>:below term<CR>live-server<CR>
-        imap <F4> :w<CR>:below term<CR>live-server<CR>
+        imap <F4> <esc>:w<CR>:below term<CR>live-server<CR>
     elseif &filetype == or("typescriptreact","javascriptreact")
         set updatetime=2000
         map <F4> :w<CR>:below term<CR>npm run dev<CR>
-        imap <F4> :w<CR>:below term<CR>npm run dev<CR>
+        imap <F4> <esc>:w<CR>:below term<CR>npm run dev<CR>
     endif
 endfunction
 
