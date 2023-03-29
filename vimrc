@@ -10,6 +10,7 @@ set t_ut=
 let g:codedark_transparent=1
 colorscheme codedark
 syntax on
+set smartcase
 set list lcs=tab:\|\ ,trail:~ "Trail char and indentlines for the languages that the plugin doesnt work.
 set tabstop=4
 set softtabstop=4
@@ -18,6 +19,7 @@ autocmd FileType javascript set shiftwidth=2 softtabstop=2
 autocmd FileType typescript set shiftwidth=2 softtabstop=2
 autocmd FileType javascriptreact set shiftwidth=2 softtabstop=2
 autocmd FileType typescriptreact set shiftwidth=2 softtabstop=2
+autocmd FileType text set nolist
 set autoindent
 set smartindent
 set shiftround
@@ -128,10 +130,6 @@ autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
-"INDENTLINE
-let g:indentLine_defaultGroup = 'SpecialKey'
-let g:indentLine_char = '|'
 
 "AUTOPAIRS
 let g:AutoPairsFlyMode = 1
