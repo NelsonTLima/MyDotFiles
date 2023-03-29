@@ -18,6 +18,8 @@ autocmd FileType javascript set shiftwidth=2 softtabstop=2
 autocmd FileType typescript set shiftwidth=2 softtabstop=2
 autocmd FileType javascriptreact set shiftwidth=2 softtabstop=2
 autocmd FileType typescriptreact set shiftwidth=2 softtabstop=2
+autocmd FileType text let g:indentLine_enabled = 0
+autocmd FileType text set nolist
 set autoindent
 set smartindent
 set shiftround
