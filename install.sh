@@ -123,6 +123,11 @@ echo "\033[32m\n\nVIM - INSTALLING RUST HIGHLIGHT\n\n\033[0m"
 
 git clone https://github.com/rust-lang/rust.vim ~/.vim/pack/plugins/start/rust.vim
 
+echo "\033[32m\n\nVIM - INSTALLING IDENTLINE\n\n\033[0m"
+
+git clone https://github.com/Yggdroot/indentLine.git ~/.vim/pack/vendor/start/indentLine
+vim -u NONE -c "helptags  ~/.vim/pack/vendor/start/indentLine/doc" -c "q"
+
 echo "\033[32m\n\nVIM - INSTALLING CLOSETAG\n\n\033[0m"
 
 git clone https://github.com/alvan/vim-closetag.git ~/.vim/vim-closetag
