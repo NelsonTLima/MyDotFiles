@@ -15,8 +15,8 @@ autocmd VimEnter * hi SignColumn guibg=NONE ctermbg=NONE
 syntax on
 set list lcs=tab:\|\ ,trail:~ "Trail char and indentlines for the languages that the plugin doesnt work.
 set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set softtabstop=2
+set shiftwidth=2
 autocmd FileType javascript set shiftwidth=2 softtabstop=2
 autocmd FileType typescript set shiftwidth=2 softtabstop=2
 autocmd FileType javascriptreact set shiftwidth=2 softtabstop=2
