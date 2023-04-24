@@ -8,7 +8,10 @@ set mouse:a
 set t_Co=256
 set t_ut=
 let g:codedark_transparent=1
-colorscheme codedark
+colorscheme slate
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+autocmd ColorScheme * hi SignColumn guibg=NONE ctermbg=NONE
+autocmd VimEnter * hi SignColumn guibg=NONE ctermbg=NONE
 syntax on
 set list lcs=tab:\|\ ,trail:~ "Trail char and indentlines for the languages that the plugin doesnt work.
 set tabstop=4
