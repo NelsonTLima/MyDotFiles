@@ -47,6 +47,10 @@ darwin*)
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+    echo "\033[32mINSTALLING INETUTILS\n\n\033[0m"
+
+    brew install inetutils
+
     echo "\033[32m\n\nINSTALLING VIM COMPILED FOR BREW\n\n\033[0m"
 
     brew install vim
