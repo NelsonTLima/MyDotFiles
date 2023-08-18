@@ -45,12 +45,13 @@ endfunction
 
 function! CompileAndRunCode()
     let commands = {
-    \"python": 'python3 %',
-    \"javascript": 'node %',
-    \"rust": 'cargo run',
-    \"bash": './%',
-    \"c": 'gcc -o %:r %;./%:r',
-    \"cpp": 'g++ -o %:r %;./%:r'}
+    \"python" : 'python3 %',
+    \"javascript" : 'node %',
+    \"rust" : 'cargo run',
+    \"bash" : './%',
+    \"c" : 'gcc -o %:r %;./%:r',
+    \"cpp" : 'g++ -o %:r %;./%:r',
+    \"php" : 'php %'}
 
     if has_key(commands, &filetype)
         exec $"!clear && printf '\e[3J' ; {commands[&filetype]}"

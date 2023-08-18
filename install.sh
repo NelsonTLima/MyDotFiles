@@ -17,6 +17,10 @@ case $OSTYPE in linux*)
 
     sudo apt install tmux
 
+    echo "\033[32m\n\nINSTALLING PHP\n\n\033[0m"
+
+    sudo apt install php
+
     echo "\033[32m\n\nINSTALLING NODEJS\n\n\033[0m"
 
     sudo apt install nodejs
@@ -62,6 +66,10 @@ darwin*)
     echo "\033[32m\n\nINSTALLING TMUX\n\n\033[0m"
 
     brew install tmux
+
+    echo "\033[32m\n\nINSTALLING PHP\n\n\033[0m"
+
+    sudo apt install php
 
     echo "\033[32m\n\nINSTALLING NODEJS\n\n\033[0m"
 
