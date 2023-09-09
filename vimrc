@@ -44,28 +44,30 @@ function! SetServerShortcuts()
 endfunction
 
 function! CompileAndRunCode()
-    let commands = {
-    \"python" : 'python3 %',
-    \"javascript" : 'node %',
-    \"rust" : 'cargo run',
-    \"bash" : './%',
-    \"c" : 'gcc -o %:r %;./%:r',
-    \"cpp" : 'g++ -o %:r %;./%:r',
-    \"php" : 'php %'}
-
-    if has_key(commands, &filetype)
-        exec $"!clear && printf '\e[3J' ; {commands[&filetype]}"
+    if &filetype == "python"
+      exec "!clear &&printf '\e[3J' ; python3 %"
+    elseif &filetype == "javascript"
+      exec "!clear &&printf '\e[3J' ; node %"
+    elseif &filetype == "rust"
+      exec "!clear &&printf '\e[3J' ; cargo run"
+    elseif &filetype == "sh"
+      exec "!clear &&printf '\e[3J'; chmod +x % ; ./%"
+    elseif &filetype == "c"
+      exec "!clear &&printf '\e[3J' ; gcc -o %:r %;./%:r"
+    elseif &filetype == "cpp"
+      exec "!clear &&printf '\e[3J' ; g++ --std=c++17 -o %:r %;./%:r"
+    elseif &filetype == "php"
+      exec "!clear &&printf '\e[3J' ; php %"
+    elseif &filetype == "arduino"
+      exec "!clear &&printf '\e[3J' ; arduino-cli compile -b arduino:avr:uno %"
     else
-        echo "Filetype not Supported"
+      echo "Filetype not Supported"
     endif
 endfunction
 
 function! TestCode()
-    let commands = {
-    \"python": 'pytest -v test.py'}
-
-    if has_key(commands, &filetype)
-        exec $"!clear && printf '\e[3J' ; {commands[&filetype]}"
+    if &filetype == "python"
+        exec "!clear && printf '\e[3J' ; pytest -v test.py"
     else
         echo "Filetype not Supported"
     endif
@@ -92,8 +94,6 @@ endfunction
 
 call SetServerShortcuts()
 map <F1> <esc>:below term<CR>
-map <F2> <esc><C-w>h
-map <F3> <esc>:w<CR>
 map <F5> <esc>:call CompileAndRunCode()<CR>
 autocmd filetype vim map <buffer> <F5> <esc>:source %<CR>
 map <F6> <esc>:call TestCode()<CR>
@@ -101,12 +101,10 @@ map <F7> <esc>:tabp<CR>
 map <F8> <esc><C-w>l
 map <F9> <esc>:tabn<CR>
 map <F10> <esc>:NERDTreeMirror<CR>:NERDTreeFocus<CR>
-map <F12> <esc>:q<CR>
+"map <F12> <esc>:q<CR>
 map ! :call HtmlInit()<CR>
 
 imap <F1> <esc>:below term<CR>
-imap <F2> <esc><C-w>h
-imap <F3> <esc>:w<CR>
 imap <F5> <esc>:call CompileAndRunCode()<CR>
 autocmd filetype vim imap <buffer> <F5> <esc>:source %<CR>
 imap <F6> <esc>:call TestCode()<CR>
@@ -114,7 +112,6 @@ imap <F7> <esc>:tabp<CR>
 imap <F8> <esc><C-w>l
 imap <F9> <esc>:tabn<CR>
 imap <F10> <esc>:NERDTreeMirror<CR>:NERDTreeFocus<CR>
-imap <F12> <esc>:q<CR>
 
 "LOAD NEOBUNDLE PLUGINS.
 
